@@ -14,9 +14,8 @@ def modify():
         file.close()
 
 def commit():
-    message = random.randint(
-        1, 3) * "q" + random.randint(1, 9) * "w" + random.randint(1, 3) * "q"
-    os.system('git commit -a -m \"'+message+'\" > /dev/null 2>&1')
+    message = random.randint(1, 3) * "q" + random.randint(1, 9) * "w" + random.randint(1, 3) * "q"
+    os.system('git commit -a -m \"'+message+'\"')
 
 def set_sys_time(year, month, day):
     os.system('sudo date -s %04d%02d%02d' % (year, month, day))
@@ -33,4 +32,6 @@ def daily_commit(start_date, end_date):
             trick_commit(cur_date.year, cur_date.month, cur_date.day)
 
 if __name__ == '__main__':
+    os.system('git config --global user.email "lemonhx@lemonhx.tech"')
+    os.system('git config --global user.name "lemonhx"')
     daily_commit(datetime.date(2019, 2, 1), datetime.date(2021, 4, 15))
