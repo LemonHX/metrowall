@@ -34,4 +34,4 @@ def daily_commit(start_date, end_date):
 if __name__ == '__main__':
     os.system('git config --global user.email "lemonhx@lemonhx.tech"')
     os.system('git config --global user.name "lemonhx"')
-    daily_commit(datetime.date(2019, 2, 1), datetime.date(2021, 4, 15))
+    daily_commit(datetime.date(2020, 1, 1), datetime.date(2020, 9, 15))
