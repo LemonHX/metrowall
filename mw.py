@@ -1,3 +1,4 @@
+# 请使用 root 运行
 import datetime
 import os
 import random
@@ -35,3 +36,4 @@ if __name__ == '__main__':
     os.system('git config --global user.email "lemonhx@lemonhx.tech"')
     os.system('git config --global user.name "lemonhx"')
     daily_commit(datetime.date(2020, 1, 1), datetime.date(2020, 9, 15))
+    os.system('ntpdate ntp.api.bz')
